@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 public class HomeController : Controller
 {
-    return IActionResult Index()
+    public IActionResult Index()
     {
         return View();
     }
