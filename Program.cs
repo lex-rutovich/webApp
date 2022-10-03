@@ -10,10 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvc();
 var app = builder.Build();
 
+app.UseStaticFiles();
 app.UseRouting();
 app.UseEndpoints(e =>
 {
-    e.MapControllerRoute("default", "{controller}/{faction}");
-})
+    e.MapControllerRoute("default", "{controller=Home}/{faction=Index}");
+});
 app.Run();
 
